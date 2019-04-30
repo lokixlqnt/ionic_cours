@@ -1,3 +1,12 @@
 page-home {
-
+  ion-content {
+    background-image: url('../assets/imgs/wall.jpg');
+  }
+  h1 {
+    color: white;
+    text-align: center;
+  }
+  button {
+    margin-top: 10rem;
+  }
 }
