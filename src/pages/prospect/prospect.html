@@ -6,6 +6,9 @@
 -->
 <ion-header>
   <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
     <ion-title>prospect</ion-title>
   </ion-navbar>
 </ion-header>
@@ -21,7 +24,7 @@
       </ion-segment-button>
     </ion-segment>
   </div>
-  
+
   <div [ngSwitch]="info">
     <ion-list *ngSwitchCase="'puppies'">
       <ion-item>
@@ -32,7 +35,7 @@
       </ion-item>
       ...
     </ion-list>
-  
+
     <ion-list *ngSwitchCase="'kittens'">
       <ion-item>
         <ion-thumbnail item-start>

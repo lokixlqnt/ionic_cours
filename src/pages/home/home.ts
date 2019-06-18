@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
 import { NavController, AlertController, Button } from 'ionic-angular';
-import { MembrePage } from '../membre/membre'
-import { ProfilPage } from '../profil/profil'
-import { Inscri } from '../../model/inscri'
+import { MembrePage } from '../membre/membre';
+import { ProfilPage } from '../profil/profil';
+import { Inscri } from '../../model/inscri';
+import { ProduitPage } from '../produit/produit';
 
 
 
@@ -22,6 +23,14 @@ export class HomePage {
   goToMembre(randParam) {
     this.navCtrl.push(MembrePage, {
       nom: randParam
+    })
+  }
+  goToProspect() {
+    this.navCtrl.push(MembrePage, {
+    })
+  }
+  goToProduit() {
+    this.navCtrl.push(ProduitPage, {
     })
   }
 

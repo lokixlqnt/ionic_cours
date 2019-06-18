@@ -9,6 +9,7 @@ import { MembrePage } from '../pages/membre/membre';
 import { ProfilPage } from '../pages/profil/profil';
 import { ProspectPage } from '../pages/prospect/prospect';
 import { ProduitPage } from '../pages/produit/produit';
+import { ProduitdetailPage } from '../pages/produitdetail/produitdetail';
 
 
 
@@ -33,7 +34,8 @@ export class MyApp {
       { title: 'Membre', component: MembrePage },
       { title: 'Profil', component: ProfilPage },
       { title: 'Prospect', component: ProspectPage },
-      { title: 'Produit', component: ProduitPage }
+      { title: 'Produit', component: ProduitPage },
+      { title: 'Produitdetail', component: ProduitdetailPage }
     ];
 
   }

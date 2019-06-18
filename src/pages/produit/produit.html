@@ -1,34 +1,100 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>produit</ion-title>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Produit</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <ion-list>
-    <ion-item-sliding>
-      <ion-item>
-        <ion-avatar item-start>
-          <img src="img/slimer.png">
-        </ion-avatar>
-        <h2>Slimer</h2>
-      </ion-item>
-      <ion-item-options side="left">
-        <button ion-button color="primary">
-          <ion-icon name="text"></ion-icon>
-          Text
+
+  <div ion-item class="">
+
+
+      <ion-list>
+        <button ion-item *ngFor="let produit of produits" (click)="getProduct(produit.id)">
+          <ion-item>
+            <ion-avatar item-start>
+              <img src="{{ produit.photo }}">
+            </ion-avatar>
+            <h2>{{ produit.name }}</h2>
+          </ion-item>
         </button>
-        <button ion-button color="secondary">
-          <ion-icon name="call"></ion-icon>
-          Call
-        </button>
-      </ion-item-options>
-      <ion-item-options side="right">
-        <button ion-button color="primary">
-          <ion-icon name="mail"></ion-icon>
-          Email
-        </button>
-      </ion-item-options>
-    </ion-item-sliding>
-  </ion-list>
+      </ion-list>
+
+
+  </div>
+
+
+  <!-- <button ion-button color="secondary" (click)="presentActionSheet()" default round>Action</button> -->
 </ion-content>
+
+
+
+<!-- <div padding>
+<ion-segment [(ngModel)]="pet">
+  <ion-segment-button value="kittens">
+    Kittens
+  </ion-segment-button>
+  <ion-segment-button value="puppies">
+    Puppies
+  </ion-segment-button>
+</ion-segment>
+</div>
+
+<div [ngSwitch]="pet">
+<ion-list *ngSwitchCase="'puppies'">
+  <ion-item>
+    <ion-thumbnail item-start>
+      <img src="img/thumbnail-puppy-1.jpg">
+    </ion-thumbnail>
+    <h2>Ruby</h2>
+  </ion-item>
+  <ion-item>
+    <ion-thumbnail item-start>
+      <img src="img/thumbnail-kitten-1.jpg">
+    </ion-thumbnail>
+    <h2>Luna</h2>
+  </ion-item>
+  <ion-item>
+    <ion-thumbnail item-start>
+      <img src="img/thumbnail-kitten-1.jpg">
+    </ion-thumbnail>
+    <h2>Luna</h2>
+  </ion-item>
+  <ion-item>
+    <ion-thumbnail item-start>
+      <img src="img/thumbnail-kitten-1.jpg">
+    </ion-thumbnail>
+    <h2>Luna</h2>
+  </ion-item>
+</ion-list>
+
+<ion-list *ngSwitchCase="'kittens'">
+  <ion-item>
+    <ion-thumbnail item-start>
+      <img src="img/thumbnail-kitten-1.jpg">
+    </ion-thumbnail>
+    <h2>Luna</h2>
+  </ion-item>
+  <ion-item>
+    <ion-thumbnail item-start>
+      <img src="img/thumbnail-kitten-1.jpg">
+    </ion-thumbnail>
+    <h2>Luna</h2>
+  </ion-item>
+  <ion-item>
+    <ion-thumbnail item-start>
+      <img src="img/thumbnail-kitten-1.jpg">
+    </ion-thumbnail>
+    <h2>Luna</h2>
+  </ion-item>
+  <ion-item>
+    <ion-thumbnail item-start>
+      <img src="img/thumbnail-kitten-1.jpg">
+    </ion-thumbnail>
+    <h2>Luna</h2>
+  </ion-item>
+</ion-list>
+</div> -->

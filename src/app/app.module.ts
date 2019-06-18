@@ -9,10 +9,14 @@ import { MembrePage } from '../pages/membre/membre'
 import { ProfilPage } from '../pages/profil/profil'
 import { ProspectPage } from '../pages/prospect/prospect';
 import { ProduitPage } from '../pages/produit/produit';
+import { ProduitdetailPage } from '../pages/produitdetail/produitdetail';
+import { AddProductPage } from '../pages/add-product/add-product';
 
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { MonsuperproviderProvider } from '../providers/monsuperprovider/monsuperprovider';
+import { HttpModule } from '@angular/http';
 
 @NgModule({
   declarations: [
@@ -22,11 +26,14 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     MembrePage,
     ProfilPage,
     ProspectPage,
-    ProduitPage
+    ProduitPage,
+    ProduitdetailPage,
+    AddProductPage,
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
+    HttpModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -36,12 +43,15 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     MembrePage,
     ProfilPage,
     ProspectPage,
-    ProduitPage
+    ProduitPage,
+    ProduitdetailPage,
+    AddProductPage,
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    MonsuperproviderProvider
   ]
 })
 export class AppModule {}

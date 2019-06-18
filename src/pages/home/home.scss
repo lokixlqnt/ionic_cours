@@ -9,4 +9,15 @@ page-home {
   button {
     margin-top: 10rem;
   }
+  .img {
+    margin-top: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+  }
+  img {
+    width: 200px;
+    height: auto;
+  }
 }
